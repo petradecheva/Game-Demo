@@ -40,7 +40,9 @@ class Preload extends Phaser.Scene{
         this.add.existing(this.assetText);
 
 
-        this.load.image("monkey", './assets/monkey.png');
+        this.load.image("boiko", './assets/boiko.png');
+        this.load.image("rumen", './assets/rumen.png');
+        this.load.image("money", './assets/money.png');
         
         this.load.on("progress", this.onProgressUpdated, this);
         this.load.on("load", this.onFileLoaded, this);
@@ -63,6 +65,7 @@ class Preload extends Phaser.Scene{
 
     private onComplete(): void{
         console.log(" complete :)");
+        this.scene.start("menu");
     }
 }
 

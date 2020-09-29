@@ -1,6 +1,6 @@
 import 'phaser';
 import { Boot } from './scenes/Boot';
-import { Main } from './scenes/Main';
+import { Menu } from './scenes/Menu';
 import { Preload } from './scenes/Preload';
 
 class GameApp extends Phaser.Game{
@@ -14,7 +14,7 @@ const config = {
     backgroundColor: 'black',
     width: 1000,
     height: 800,
-    scene: [Preload]
+    scene: [Preload, Menu]
 };
 
 const game = new Phaser.Game(config);
