@@ -27,7 +27,7 @@ class Preload extends Phaser.Scene{
         this.progressBar.fillStyle(0x6E6F6C,1);
         this.add.existing(this.progressBar);
 
-        this.loadingText = this.add.text(width / 2 + 10, height * 0.5 - 140, "Loading...", {fontSize: "40px", fontFamily:'Monospace', fill: " orange "});
+        this.loadingText = this.add.text(width / 2 + 10, height * 0.5 - 140, "Зареждане...", {fontSize: "40px", fontFamily:'Monospace', fill: " orange "});
         this.loadingText.setOrigin(0.5, 1);
         this.add.existing(this.loadingText);
 
@@ -43,6 +43,7 @@ class Preload extends Phaser.Scene{
         this.load.image("boiko", './assets/boiko.png');
         this.load.image("rumen", './assets/rumen.png');
         this.load.image("money", './assets/money.png');
+        this.load.image('cecka', './assets/cecka.png');
         
         this.load.on("progress", this.onProgressUpdated, this);
         this.load.on("load", this.onFileLoaded, this);
@@ -60,7 +61,7 @@ class Preload extends Phaser.Scene{
     }
 
     private onFileLoaded(file: Phaser.Loader.File): void {
-        this.assetText.setText("Loading asset: " + file.key);
+        this.assetText.setText("Зареден файл: " + file.key);
     }
 
     private onComplete(): void{

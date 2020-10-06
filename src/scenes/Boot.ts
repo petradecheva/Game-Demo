@@ -4,8 +4,7 @@ class Boot extends Phaser.Scene{
     }
 
     create(){
-        // this.game.events.on("hidden", this.onHidden, this);
-        // this.game.events.on("visible", this.onVisible, this);
+        this.scene.start("preload");
     }
 }
 
